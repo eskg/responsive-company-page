@@ -1,56 +1,113 @@
-.header-wrapper {
+.header,
+.nav-drawer,
+.nav-overlay {
   position: fixed;
   top:0;
   left:0;
   right: 0;
-  z-index: 100;
+  display: flex;
 }
 
 .header {
   background-color: #eaecee;
   height: 55px;
   padding: 0 40px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 100;
 }
 
-.header img{
+.header-mobile-logo{
   height: 45px;
   align-self: center;
+}
+
+.header-desktop-logo {
+  display: none;
+  background-color: #FFF;
+  margin-top: 5px;
+  padding: 7.5px 15px;
+  height: 100px;
+}
+
+.header-title {
+  display: none;
+  flex-direction: column;
+  padding: 0 40px 0 25px;
+  margin-bottom: 5px;
+  border-right: 2px solid #ccc;
+}
+
+.header-title p {
+  color: #009bfa;
+  font-weight: bold;
+  font-size: 17.5px;
+}
+
+.header-title h1 {
+  color: #193989;
+  font-size: 42px;
+  line-height: 35px;
+}
+
+.dummy-icon {
+  width: 30px;
 }
 
 .header svg{
   font-size: 30px;
   cursor: pointer;
 }
+
 .close-nav-btn {
   color: #d81e05;
 }
 
-.icon-placeholder {
-  width: 30px;
+.header-nav{
+  display: none;
+  align-items: flex-end;
 }
 
-.header-nav {
+.header-nav a {
+  padding: 30px 40px 0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.nav-drawer {
+  flex-direction: column;
+  text-align: center;
   padding: 10px 20px 40px 20px;
   background-color: #FFF;
   font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   font-weight: 500;
-  min-height: none;
+  position: fixed;
+  top: 55px;
+  z-index: 99;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  -moz-transition: -moz-transform .5s ease-in-out;
+  -o-transition: -o-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
 
-.header-nav p {
+.nav-drawer.drawer-closed {
+  transform: translate(0px, -750px);
+  -webkit-transform: translate(0px, -750px);
+  -ms-transform: translate(0px, -750px);
+  -o-transform: translate(0px, -750px);
+  -moz-transform: translate(0px, -750px);
+}
+
+.nav-drawer p {
   border-bottom: solid 1px #bfbfbf;
   padding: 5px;
   color: #193989;
   margin: 5px 0;
 }
 
-.header-nav a {
+.nav-drawer a {
   text-decoration: none;
   background-color: #ebebeb;
   padding: 20px;
@@ -60,16 +117,50 @@
 
 .nav-overlay {
   background-color: rgba(0, 0, 0, .68);
-  position: absolute;
-  top:0;
-  left:0;
-  right: 0;
   bottom: 0;
   z-index: 90;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
 }
 
-.header-nav,
-.nav-overlay {
-  transform-origin: top;
-  transition: transform .2s ease-out;
+.nav-overlay.hide-overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    background-color: #FFF;
+    height: 100px;
+    border-bottom: 20px solid #001254;
+    justify-content: center;
+  }
+
+  .header-mobile-logo {
+    display: none;
+  }
+
+  .header-title {
+    display: flex;
+  }
+
+  .header-desktop-logo {
+    display: block;
+  }
+  
+  .header-icon-btns {
+    display: none;
+  }
+
+  .header-nav{
+    display: flex;
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+  .header-nav a {
+    font-size: 20px;
+    padding: 30px 50px 0;
+  }
 }
