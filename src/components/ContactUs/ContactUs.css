@@ -1,0 +1,30 @@
+.contact-us-container {
+  background-color: #1450d2;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 50px;
+  text-align: center;
+  font-size: 24px;
+  -webkit-box-shadow: inset 0px -45px 5px -30px rgba(0,0,0,0.2), 
+    inset 0px 45px 5px -30px rgba(0,0,0,0.2); 
+  box-shadow: inset 0px -45px 5px -30px rgba(0,0,0,0.2),
+      inset 0px 45px 5px -30px rgba(0,0,0,0.2); 
+}
+
+.contact-us-link{
+  color: #FFF;
+  border: 1px solid #FFF;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+
+@media screen and (min-width: 1400px) {
+  .contact-us-container {
+    padding: 100px 500px;
+  }
+}

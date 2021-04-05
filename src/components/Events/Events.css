@@ -1,0 +1,159 @@
+.events {
+  background-color: #ebebeb;
+  padding: 40px 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.events h1 {
+  font-size: 40px;
+  color: #001a7a;
+}
+
+.events span {
+  font-weight: 400;
+}
+
+.events h5 {
+  color: #707070;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.event-cards-container{
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.event-card {
+  background-color: #001a7a;
+  padding: 70px 0 0 30px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  position: relative;
+  margin: 0 10px;
+  white-space: normal;
+  overflow: visible;
+}
+
+.event-card h1 {
+  color: #FFF;
+  line-height: 40px;
+  margin-right: 40px;
+}
+
+.event-card p {
+  color: #FFF;
+  margin: 20px 0;
+  font-size: 24px;
+  margin-right: 40px;
+}
+
+.event-card a {
+  color: #FFF;
+  border: solid 1px #FFF;
+  padding: 12.5px 20px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.event-card-footer {
+  background-color: #ebebeb;
+  width: calc(100% - 50px);
+  position: relative;
+  margin-left: 50px;
+}
+
+.event-card-footer p {
+  text-align: end;
+  color: #707070;
+  font-size: 18px;
+  margin: 0 10px 0 0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.event-card-footer::after {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  content: "";
+  border-bottom: 25px solid #ebebeb;
+  border-left: 25px solid transparent;
+  border-top: 25px solid transparent;
+  border-right: 25px solid #ebebeb;
+}
+
+.events-logo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.event-card-date {
+  position: absolute;
+  background-color: #FFF;
+  top: -15px;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: #008c82;
+  width: 45px;
+  text-transform: uppercase;
+}
+
+.date-day {
+  color: #008c82;
+  font-size: 30px;
+  font-weight: bold !important;
+  line-height: 25px;
+}
+
+
+.events-desc-desktop {
+  display: hidden;
+}
+
+@media screen and (min-width: 1400px) {
+  .upcoming-events {
+    padding-left: 200px;
+  }
+  
+  .events span {
+    font-weight: bold;
+  }
+
+  .events-desc-mobile{
+    display: hidden;
+  }
+
+  .events-desc-desktop {
+    display: block;
+  }
+  .event-card {
+    background-color: #1450d2;
+  }
+
+  .event-card-date {
+    background-color: #001254;
+    color: #fff;
+  }
+  .date-day {
+    color: #fff;
+  }
+}
+
+
+@media screen and (min-width: 1800px) {
+  .upcoming-events {
+    padding-left: 400px;
+  }
+}

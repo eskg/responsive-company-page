@@ -1,0 +1,37 @@
+.banner-mobile {
+  background-color: #1a9cf7;
+  color: rgba(255, 255, 255, .8);
+  font-weight: 400;
+  padding: 50px 50px 170px;
+  background-position: 0 15%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+}
+
+.banner-mobile p {
+  font-size: 26px;
+}
+
+.banner-mobile .acme {
+  margin-top: 80px;
+}
+
+.banner-mobile span {
+  font-size: 30px;
+  margin-right: 10px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, .5);
+}
+.banner-mobile .investment {
+  margin-top: 20px;
+}
+.banner-mobile h1 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-mobile {
+    background-image: none !important;
+  }
+}
