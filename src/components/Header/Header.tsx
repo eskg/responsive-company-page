@@ -48,7 +48,7 @@ const Header = () => {
       </header>
 
       <div className={`nav-drawer ${!isNavOpen ? 'drawer-closed' : ''}`}>
-        <p>Site Links</p>
+        <p className="site-links">Site Links</p>
         <a href="/">Home</a>
         <a href="/">About Us</a>
         <a href="/">Insights</a>

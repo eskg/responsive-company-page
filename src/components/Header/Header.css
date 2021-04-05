@@ -70,7 +70,6 @@
 
 .header-nav a {
   padding: 30px 40px 0;
-  text-decoration: none;
   font-size: 18px;
   font-weight: 600;
   color: #000;
@@ -79,7 +78,7 @@
 .nav-drawer {
   flex-direction: column;
   text-align: center;
-  padding: 10px 20px 40px 20px;
+  padding: 10px 40px 40px;
   background-color: #FFF;
   font-size: 18px;
   font-weight: 500;
@@ -100,7 +99,7 @@
   -moz-transform: translate(0px, -750px);
 }
 
-.nav-drawer p {
+.site-links {
   border-bottom: solid 1px #bfbfbf;
   padding: 5px;
   color: #193989;
@@ -108,10 +107,9 @@
 }
 
 .nav-drawer a {
-  text-decoration: none;
   background-color: #ebebeb;
   padding: 20px;
-  margin: 5px;
+  margin: 5px 0;
   color: #707070;
 }
 
